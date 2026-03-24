@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session | Back on Track Counselling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🚀 Back on Track</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About & Team</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="booking.html" class="btn-cta active">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h2>Book Your Session</h2>
+        <p>Start your journey to better mental health today</p>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-grid">
+                <!-- Booking Form -->
+                <div class="booking-form-container">
+                    <h3>Schedule Your Session</h3>
+                    <form class="booking-form" onsubmit="handleBookingSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Type of Service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service...</option>
+                                <option value="individual">Individual Counselling</option>
+                                <option value="couples">Couples Therapy</option>
+                                <option value="family">Family Counselling</option>
+                                <option value="grief">Grief & Bereavement</option>
+                                <option value="anxiety">Anxiety & Depression</option>
+                                <option value="transition">Life Transitions & Coaching</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="counsellor">Preferred Counsellor (Optional)</label>
+                            <select id="counsellor" name="counsellor">
+                                <option value="">Any available counsellor</option>
+                                <option value="sarah">Dr. Sarah Thompson</option>
+                                <option value="michael">Michael Chen</option>
+                                <option value="jessica">Jessica Rodriguez</option>
+                                <option value="david">David Patel</option>
+                                <option value="emily">Emily Watson</option>
+                                <option value="robert">Robert Kim</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="format">Session Format *</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="format" value="online" required> Online
+                                </label>
+                                <label>
+                                    <input type="radio" name="format" value="inperson"> In-Person
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Preferred Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Preferred Time *</label>
+                            <select id="time" name="time" required>
+                                <option value="">Select a time...</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="issues">What brings you in? (Brief description)</label>
+                            <textarea id="issues" name="issues" rows="4" placeholder="Tell us what you'd like to work on..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" name="consent" required>
+                                I agree to the privacy policy and terms of service
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Book My Session</button>
+                    </form>
+                    <p class="form-note">Our team will confirm your booking within 24 hours</p>
+                </div>
+
+                <!-- Booking Info Sidebar -->
+                <div class="booking-info">
+                    <div class="info-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h4>First Session</h4>
+                        <p>Your first session is 50 minutes and includes an initial assessment to understand your needs and goals.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Flexible Scheduling</h4>
+                        <p>Schedule sessions that work for you. We offer morning, afternoon, and evening appointments.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-video"></i>
+                        <h4>Online & In-Person</h4>
+                        <p>Choose between secure video sessions from home or visits to our comfortable office.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h4>Payment Options</h4>
+                        <p>We accept all major credit cards, e-transfers, and have package payment plans available.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-lock"></i>
+                        <h4>Confidentiality</h4>
+                        <p>All information is kept strictly confidential under professional and legal standards.</p>
+                    </div>
+
+                    <div class="info-card urgent">
+                        <i class="fas fa-phone"></i>
+                        <h4>In Crisis?</h4>
+                        <p>If you need immediate support, please call our crisis line: <strong>(555) 789-0123</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h3>Get In Touch</h3>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Visit Us</h4>
+                    <p>123 Wellness Avenue<br>Toronto, ON M5H 2K1<br>Canada</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <h4>Call Us</h4>
+                    <p>Main: (555) 123-4567<br>Crisis: (555) 789-0123<br>Mon-Fri 9am-6pm EST</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Us</h4>
+                    <p>General: info@backontrack.com<br>Support: support@backontrack.com<br>Quick response time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How much does counselling cost?</h4>
+                    <p>Individual sessions are $75 for 50 minutes. We offer package discounts: 5-session packages for $350 or 10-session packages for $650. Many insurance plans cover our services.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is online counselling as effective as in-person?</h4>
+                    <p>Research shows online counselling is equally effective as in-person sessions. The key is finding a format that makes you comfortable and able to be open.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is the cancellation policy?</h4>
+                    <p>We require 48 hours notice for cancellations. Cancellations with less notice may be charged. We understand life happens and will work with you on exceptions.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long does therapy typically last?</h4>
+                    <p>This varies based on individual needs. Some clients benefit from short-term counselling (6-12 sessions) while others continue longer-term. We'll discuss what's right for you.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is everything I say confidential?</h4>
+                    <p>Yes, with very few legal exceptions (if you're at risk of harming yourself or others). We follow strict confidentiality standards as required by law.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I request a specific counsellor?</h4>
+                    <p>Absolutely! You can request a specific counsellor during booking. If your preferred counsellor isn't available, we'll suggest someone who might be a great fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>Back on Track Counselling</h5>
+                    <p>Professional mental health support for a better tomorrow.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact</h5>
+                    <p>Email: info@backontrack.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Hours: Mon-Fri 9am-6pm</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Back on Track Counselling. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
