@@ -44,82 +44,18 @@
     <section class="booking-section">
         <div class="container">
             <div class="booking-grid">
-                <!-- Booking Form -->
+                <!-- Calendly Booking -->
                 <div class="booking-form-container">
                     <h3>Schedule Your Session</h3>
-                    <form class="booking-form" onsubmit="handleBookingSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/janinejlb88" style="min-width:320px;height:700px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Type of Service *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Select a service...</option>
-                                <option value="integrative">Integrative Counselling</option>
-                                <option value="solution-focused">Solution-Focused Therapy</option>
-                                <option value="person-centred">Person-Centred Therapy</option>
-                                <option value="cbt">Cognitive Behavioural Therapy (CBT)</option>
-                                <option value="trauma-informed">Trauma-Informed Support</option>
-                                <option value="long-covid">Long COVID, Anxiety, Depression & Stroke Recovery</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="format">Session Format *</label>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="format" value="online" required> Online
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="date">Preferred Date *</label>
-                            <input type="date" id="date" name="date" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="time">Preferred Time *</label>
-                            <select id="time" name="time" required>
-                                <option value="">Select a time...</option>
-                                <option value="09:00">9:00 AM</option>
-                                <option value="10:00">10:00 AM</option>
-                                <option value="11:00">11:00 AM</option>
-                                <option value="12:00">12:00 PM</option>
-                                <option value="14:00">2:00 PM</option>
-                                <option value="15:00">3:00 PM</option>
-                                <option value="16:00">4:00 PM</option>
-                                <option value="17:00">5:00 PM</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="issues">What brings you in? (Brief description)</label>
-                            <textarea id="issues" name="issues" rows="4" placeholder="Tell us what you'd like to work on..."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="checkbox">
-                                <input type="checkbox" name="consent" required>
-                                I agree to the privacy policy and terms of service
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-large">Book My Session</button>
-                    </form>
-                    <p class="form-note">Our team will confirm your booking within 24 hours</p>
+                    <div class="info-card" style="margin-top: 1.5rem; text-align: left;">
+                        <i class="fas fa-file-contract"></i>
+                        <h4>Cancellation Policy</h4>
+                        <p>Please review our cancellation terms before confirming your session.</p>
+                        <a href="cancellation-policy.html" class="btn btn-secondary">Read Cancellation Policy</a>
+                    </div>
                 </div>
 
                 <!-- Booking Info Sidebar -->
@@ -248,13 +184,14 @@
                     <p>Online consultations only until further notice.</p>
                 </div>
                 <div class="footer-section">
-                    <h5>Follow Us</h5>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                    <h5>Policies & Legal</h5>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
+                        <li><a href="data-protection-security.html">Data Protection & Security</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
